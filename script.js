@@ -15,19 +15,16 @@ function start() {
   const input = prompt("Давай переведем секунды в часы и минуты?");
   const seconds = Number(input);
 
-  // не число
   if (input === null || input.trim() === "" || isNaN(seconds)) {
     alert("Пожалуйста, введи число");
     return;
   }
 
-  // отрицательное
   if (seconds < 0) {
     alert("Число не может быть отрицательным");
     return;
   }
 
-  // слишком большое
   if (seconds > 99999) {
     alert("Слишком большое число, введи меньше");
     return;
